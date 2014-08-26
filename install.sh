@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 #########################
 # install.sh
 # This script sets up my work environment on a linux machine.
@@ -42,11 +42,15 @@ install_zsh()
     if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
         # Clone the oh-my-zsh repository from Github if it isn't already present
         if [[ ! -d $dir/oh-my-zsh/ ]]; then
+            echo "Cloning oh-my-zsh ..."
             git clone http://github.com/robbyrussell/oh-my-zsh.git
+            echo "done"
         fi
         # Set the dfault shell to zsh if it isn't already
         if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+            echo "Setting default shell to zsh"
             chsh -s $(which zsh)
+            echo "done"
         fi
     else
         # If zsh isn't installed, install it and then run this function again
