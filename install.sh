@@ -13,7 +13,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="vimrc gvimrc" # add files to this line as needed
+files="vimrc gvimrc zshrc oh-my-zsh" # add files to this line as needed
 
 #########
 
