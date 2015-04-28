@@ -16,9 +16,12 @@ syntax on           " Turn on syntax coloring
 "set background=dark " This colorscheme has both light and dark backgrounds
 "let g:seoul256_background = 234
 "colorscheme seoul256
-colorscheme molokai
+"colorscheme molokai
+let g:solarized_termcolors=256
+colorscheme solarized
+set background=light
 
-set cursorline      " Highlight the line with the cursor
+"set cursorline      " Highlight the line with the cursor
 set scrolloff=3     " Keep 3 lines above and below the cursor
 
 " Use jk in place of escape. This is much quicker/easier to type.

@@ -78,3 +78,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# To enable 256 color support 
+# (http://stackoverflow.com/questions/25274842/256-colors-in-zsh-syntax-highlighting)
+[[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
