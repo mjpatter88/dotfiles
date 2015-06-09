@@ -8,6 +8,7 @@ elseif has("unix")
 		set guifont=Inconsolata\ 12
 	endif
 
+    set t_Co=256        " Make vim use 256 colors so colorschemes look right
 	"colorscheme gruvbox " Use a nice colorscheme
 	"set background=dark " This colorscheme has both light and dark backgrounds
 	"let g:seoul256_background = 234
@@ -30,7 +31,6 @@ set expandtab       " Convert all tabs to spaces
 filetype plugin indent on
 
 set number          " Turn on line numbers
-set t_Co=256        " Make vim use 256 colors so colorschemes look right
 syntax on           " Turn on syntax coloring
 
 "set cursorline      " Highlight the line with the cursor
