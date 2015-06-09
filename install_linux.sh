@@ -1,11 +1,11 @@
 #!/bin/bash
 #########################
-# install.sh
+# install_linux.sh
 # This script sets up my work environment on a linux machine.
 # At this point it assumes you have git (and vim) already installed.
-# 
+#
 # It was heavily inspired by the work of Michael Smalley.
-# 
+#
 # See: http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
 #########################
 
@@ -31,7 +31,7 @@ echo "done"
 # Move old files and create symlinks
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
+    mv ~/.$file $olddir
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
@@ -63,4 +63,3 @@ install_zsh()
 
 # Uncomment the following line to install zsh and configure it.
 #install_zsh
-
