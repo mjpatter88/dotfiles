@@ -13,7 +13,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="vimrc gvimrc zshrc oh-my-zsh" # add files to this line as needed
+files="vimrc" # add files to this line as needed (gvimrc zshrc oh-my-zsh) etc
 
 #########
 
@@ -61,4 +61,6 @@ install_zsh()
     fi
 }
 
-install_zsh
+# Uncomment the following line to install zsh and configure it.
+#install_zsh
+
