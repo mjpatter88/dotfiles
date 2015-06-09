@@ -9,8 +9,8 @@ elseif has("unix")
 	endif
 
     set t_Co=256        " Make vim use 256 colors so colorschemes look right
-	"colorscheme gruvbox " Use a nice colorscheme
-	"set background=dark " This colorscheme has both light and dark backgrounds
+	colorscheme gruvbox " Use a nice colorscheme
+	set background=dark " This colorscheme has both light and dark backgrounds
 	"let g:seoul256_background = 234
 	"colorscheme seoul256
 	"colorscheme molokai
