@@ -2,7 +2,14 @@
 if has("win32")
 	if has("gui_running")
 		set guifont=Consolas:h11:cANSI
+        set lines=60
+        set columns=120
 	endif
+
+    " Place colorschemes for windows in: C:\Program Files (x86)\Vim\vim74\colors\
+	colorscheme gruvbox " Use a nice colorscheme
+	set background=dark " This colorscheme has both light and dark backgrounds
+
 elseif has("unix")
 	if has("gui_running")
 		set guifont=Inconsolata\ 12
@@ -33,6 +40,7 @@ filetype plugin indent on
 
 set number          " Turn on line numbers
 syntax on           " Turn on syntax coloring
+set nowrap          " Turn off word wrapping
 
 "set cursorline      " Highlight the line with the cursor
 set scrolloff=3     " Keep 3 lines above and below the cursor
