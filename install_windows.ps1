@@ -18,7 +18,7 @@
 
 $dir = "~/dotfiles"
 $olddir = "~/dotfiles_old"
-$files = ("vimrc") # add files to this line as needed (gvimrc zshrc oh-my-zsh) etc
+$files = ("vimrc ideavimrc") # add files to this line as needed (gvimrc zshrc oh-my-zsh) etc
 
 #########
 
