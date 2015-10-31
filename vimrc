@@ -1,7 +1,17 @@
+set nocompatible    " Don't need compatability with vi
+
 " Do OS specific things here
-if has("win32")
+if has("gui_macvim")
+    colorscheme gruvbox
+    set background=dark
+    set mouse=a             " Enable the mouse.
+    set mh                  " Hide the mouse while typing.
+    set gfn=Monaco:h11      " Use Monaco size 11.
+    set linespace=-1        " Move the lines a bit closer togeter.
+
+elseif has("win32")
 	if has("gui_running")
-		set guifont=Consolas:h11:cANSI
+		set guifont=Consolas:h13:cANSI
         set lines=60
         set columns=120
 	endif
@@ -27,7 +37,6 @@ elseif has("unix")
 	"set background=light
 endif
 
-set nocompatible    " Don't need compatability with vi
 
 " Configure correct tab behavior
 set shiftwidth=4    " Make all tabs 4 spaces wide 
@@ -38,6 +47,7 @@ set expandtab       " Convert all tabs to spaces
 " Detect the filetype and use automatic indenting based on the filetype.
 filetype plugin indent on
 
+set relativenumber  " Turn on relative numbering.
 set number          " Turn on line numbers
 syntax on           " Turn on syntax coloring
 set nowrap          " Turn off word wrapping
@@ -45,10 +55,10 @@ set nowrap          " Turn off word wrapping
 "set cursorline      " Highlight the line with the cursor
 set scrolloff=3     " Keep 3 lines above and below the cursor
 
-" Use jk in place of escape. This is much quicker/easier to type.
+" Use jk in place of escape (in insert mode). This is much quicker/easier to type.
 inoremap jk <esc>
 
-" Switch colon and semicolon to make it much quicker/easier to enter commands.
+" Switch colon and semicolon (in normal mode) to make it much quicker/easier to enter commands.
 nnoremap ; :
 nnoremap : ;
 
@@ -58,3 +68,24 @@ set smartcase       " If you type a capital letter, be case sensitive.
 
 " Allows backspace to delete indentation, line break, etc.
 set backspace=indent,eol,start
+
+" Use the tab key to match bracket pairs in normal and visual mode.
+nnoremap <tab> %
+vnoremap <tab> %
+
+" Set the leader key to ,
+let mapleader= ","
+
+" <leader>v will now quickly select the most recently pasted text, since it
+" often needs to be indented, etc.
+nnoremap <leader>v V']
+
+" Open a new vertical split and move to it by using <leader>w
+nnoremap <leader>w <C-w>v<C-w>l
+
+" Use <leader> follwed by a direction to move around between splits
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+
