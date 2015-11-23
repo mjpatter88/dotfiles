@@ -76,11 +76,6 @@ vnoremap <tab> %
 " Set the leader key to ,
 let mapleader= ","
 
-" Set <leader>p to open up the autocomplete and <leader>n to 
-" go to the next autocomplete option.
-inoremap <leader>p <C-p>
-inoremap <leader>n <C-n>
-
 " <leader>v will now quickly select the most recently pasted text, since it
 " often needs to be indented, etc.
 nnoremap <leader>v V']
