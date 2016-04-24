@@ -59,8 +59,8 @@ set scrolloff=3     " Keep 3 lines above and below the cursor
 inoremap jk <esc>
 
 " Switch colon and semicolon (in normal mode) to make it much quicker/easier to enter commands.
-nnoremap ; :
-nnoremap : ;
+" nnoremap ; :
+" nnoremap : ;
 
 set incsearch       " Preview the search as you type it.
 set ignorecase      " Ignore case when searching.
