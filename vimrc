@@ -1,5 +1,10 @@
 set nocompatible    " Don't need compatability with vi
 
+if has('nvim')
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    let g:gruvbox_italic=1
+endif
+
 " Do OS specific things here
 if has("gui_macvim")
     colorscheme gruvbox

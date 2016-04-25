@@ -113,7 +113,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# custom changes made by Michael
+###################### custom changes made by Michael #####################
 # Enable broadcasting of 256 color support
 # > "tput colors" should print "256" in terminal
 export TERM="xterm-256color"
+
+# Activate pyenv
+export PATH="/home/michael/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
+
