@@ -1,5 +1,10 @@
 set nocompatible    " Don't need compatability with vi
 
+if has('nvim')
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    let g:gruvbox_italic=1
+endif
+
 " Do OS specific things here
 if has("gui_macvim")
     colorscheme gruvbox
@@ -59,8 +64,8 @@ set scrolloff=3     " Keep 3 lines above and below the cursor
 inoremap jk <esc>
 
 " Switch colon and semicolon (in normal mode) to make it much quicker/easier to enter commands.
-"nnoremap ; :
-"nnoremap : ;
+" nnoremap ; :
+" nnoremap : ;
 
 set incsearch       " Preview the search as you type it.
 set ignorecase      " Ignore case when searching.
