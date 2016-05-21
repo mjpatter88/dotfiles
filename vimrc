@@ -6,7 +6,7 @@ if has("gui_macvim")
     set background=dark
     set mouse=a             " Enable the mouse.
     set mh                  " Hide the mouse while typing.
-    set gfn=Monaco:h11      " Use Monaco size 11.
+    set gfn=Monaco:h12      " Use Monaco size 12.
     set linespace=-1        " Move the lines a bit closer togeter.
 
 elseif has("win32")
@@ -59,8 +59,8 @@ set scrolloff=3     " Keep 3 lines above and below the cursor
 inoremap jk <esc>
 
 " Switch colon and semicolon (in normal mode) to make it much quicker/easier to enter commands.
-nnoremap ; :
-nnoremap : ;
+"nnoremap ; :
+"nnoremap : ;
 
 set incsearch       " Preview the search as you type it.
 set ignorecase      " Ignore case when searching.
