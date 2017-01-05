@@ -2,7 +2,10 @@ set nocompatible    " Don't need compatability with vi
 
 if has('nvim')
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
     let g:gruvbox_italic=1
+    let g:python3_host_prog='/home/michael/.pyenv/versions/nvim/bin/python'
+    let g:python_host_prog='/home/michael/.pyenv/versions/nvim2/bin/python'
 endif
 
 " Do OS specific things here
