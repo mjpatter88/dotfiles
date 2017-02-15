@@ -1,11 +1,21 @@
 set nocompatible    " Don't need compatability with vi
 
+" Do nvim specific things here
 if has('nvim')
     set termguicolors
     let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
     let g:gruvbox_italic=1
     let g:python3_host_prog='/home/michael/.pyenv/versions/nvim/bin/python'
     let g:python_host_prog='/home/michael/.pyenv/versions/nvim2/bin/python'
+
+"    let g:python_host_prog = '/Users/michael/.pyenv/versions/neovim3/bin/python'
+"    call plug#begin('~/.vim/plugged')
+"    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"    Plug 'zchee/deoplete-jedi'
+"    call plug#end()
+"
+"    let g:deoplete#enable_at_startup = 1
+"    let deoplete#sources#jedi#show_docstring = 1
 endif
 
 " Do OS specific things here
@@ -91,6 +101,9 @@ nnoremap <leader>v V']
 " Open a new vertical split and move to it by using <leader>w
 nnoremap <leader>w <C-w>v<C-w>l
 
+" Open a new horizontal split and move to it by using <leader>s
+nnoremap <leader>s <C-w>s<C-w>j
+
 " Use <leader> follwed by a direction to move around between splits
 nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
@@ -101,3 +114,4 @@ nnoremap <leader>l <C-w>l
 nnoremap <leader>= <C-w>=
 nnoremap <leader>> <C-w>>
 nnoremap <leader>< <C-w><
+
