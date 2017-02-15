@@ -15,14 +15,13 @@ if has('nvim')
         let g:python_host_prog='/home/michael/.pyenv/versions/nvim2/bin/python'
     endif
 
-"    let g:python_host_prog = '/Users/michael/.pyenv/versions/neovim3/bin/python'
-"    call plug#begin('~/.vim/plugged')
-"    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"    Plug 'zchee/deoplete-jedi'
-"    call plug#end()
-"
-"    let g:deoplete#enable_at_startup = 1
-"    let deoplete#sources#jedi#show_docstring = 1
+    call plug#begin('~/.local/share/nvim/plugged')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'zchee/deoplete-jedi'
+    call plug#end()
+
+    let g:deoplete#enable_at_startup = 1
+    let deoplete#sources#jedi#show_docstring = 1
 endif
 
 " Do OS specific things here
