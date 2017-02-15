@@ -5,8 +5,15 @@ if has('nvim')
     set termguicolors
     let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
     let g:gruvbox_italic=1
-    let g:python3_host_prog='/home/michael/.pyenv/versions/nvim/bin/python'
-    let g:python_host_prog='/home/michael/.pyenv/versions/nvim2/bin/python'
+
+    let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+        let g:python3_host_prog='/Users/michael/.pyenv/versions/nvim/bin/python'
+        let g:python_host_prog='/Users/michael/.pyenv/versions/nvim2/bin/python'
+    else
+        let g:python3_host_prog='/home/michael/.pyenv/versions/nvim/bin/python'
+        let g:python_host_prog='/home/michael/.pyenv/versions/nvim2/bin/python'
+    endif
 
 "    let g:python_host_prog = '/Users/michael/.pyenv/versions/neovim3/bin/python'
 "    call plug#begin('~/.vim/plugged')
