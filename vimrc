@@ -1,4 +1,5 @@
-set nocompatible    " Don't need compatability with vi
+set nocompatible
+let mapleader= ","
 
 " Do nvim specific things here
 if has('nvim')
@@ -18,10 +19,17 @@ if has('nvim')
     call plug#begin('~/.local/share/nvim/plugged')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'zchee/deoplete-jedi'
+    Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf.vim'
     call plug#end()
 
+    " Autocomplete settings for deoplete and jedi
     let g:deoplete#enable_at_startup = 1
     let deoplete#sources#jedi#show_docstring = 1
+
+    " Mappings for fzf
+    nnoremap <leader>b :Buffers<CR>
+
 endif
 
 " Do OS specific things here
@@ -97,8 +105,6 @@ set backspace=indent,eol,start
 nnoremap <tab> %
 vnoremap <tab> %
 
-" Set the leader key to ,
-let mapleader= ","
 
 " <leader>v will now quickly select the most recently pasted text, since it
 " often needs to be indented, etc.
