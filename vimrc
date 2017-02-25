@@ -36,7 +36,9 @@ if has('nvim')
 		return !col || getline('.')[col - 1]  =~ '\s'
     endfunction"}}}
 
+    " Show python docstring but close after selection
     let deoplete#sources#jedi#show_docstring = 1
+    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
     " Mappings for fzf
     nnoremap <leader>b :Buffers<CR>
