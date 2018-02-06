@@ -21,6 +21,9 @@ if has('nvim')
     Plug 'zchee/deoplete-jedi'
     Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
+    Plug 'mhartington/oceanic-next'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'itchyny/lightline.vim'
     call plug#end()
 
     " Autocomplete settings for deoplete and jedi
@@ -42,6 +45,12 @@ if has('nvim')
 
     " Mappings for fzf
     nnoremap <leader>b :Buffers<CR>
+    nnoremap <leader>f :Files<CR>
+
+    " Remove bottom status line showing mode since we are using lightline.
+    set noshowmode
+    " Remap escape to get back to normal mode in virtual terminal
+    tnoremap <Esc> <C-\><C-n>
 
 endif
 
