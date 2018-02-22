@@ -17,13 +17,15 @@ if has('nvim')
     endif
 
     call plug#begin('~/.local/share/nvim/plugged')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'zchee/deoplete-jedi'
-    Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all' }
-    Plug 'junegunn/fzf.vim'
-    Plug 'mhartington/oceanic-next'
-    Plug 'leafgarland/typescript-vim'
-    Plug 'itchyny/lightline.vim'
+        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+        Plug 'zchee/deoplete-jedi'
+        Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all' }
+        Plug 'junegunn/fzf.vim'
+        " Plug 'mhartington/oceanic-next'
+        " Plug 'leafgarland/typescript-vim'
+        Plug 'itchyny/lightline.vim'
+        Plug 'sheerun/vim-polyglot'
+        Plug 'tpope/vim-fugitive'
     call plug#end()
 
     " Autocomplete settings for deoplete and jedi
