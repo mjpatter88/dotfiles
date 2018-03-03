@@ -21,11 +21,10 @@ if has('nvim')
         Plug 'zchee/deoplete-jedi'
         Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all' }
         Plug 'junegunn/fzf.vim'
-        " Plug 'mhartington/oceanic-next'
-        " Plug 'leafgarland/typescript-vim'
         Plug 'itchyny/lightline.vim'
         Plug 'sheerun/vim-polyglot'
         Plug 'tpope/vim-fugitive'
+        Plug 'morhetz/gruvbox'
     call plug#end()
 
     " Autocomplete settings for deoplete and jedi
@@ -113,10 +112,6 @@ set scrolloff=3     " Keep 3 lines above and below the cursor
 
 " Use jk in place of escape (in insert mode). This is much quicker/easier to type.
 inoremap jk <esc>
-
-" Switch colon and semicolon (in normal mode) to make it much quicker/easier to enter commands.
-" nnoremap ; :
-" nnoremap : ;
 
 set incsearch       " Preview the search as you type it.
 set ignorecase      " Ignore case when searching.
